@@ -12,6 +12,7 @@ namespace ConsoleAppQuotedParse
         public static Token ReadQuotedField(string line, int startIndex)
         {
             string pattern = "(\'|\")([^\"]*)(\'|\")";
+            
             Regex regex = new Regex(pattern);
             MatchCollection collection = regex.Matches(line);
             string str = collection.ToString();
